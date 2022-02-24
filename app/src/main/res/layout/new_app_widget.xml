@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Widget.AppWidgetPAPB2.AppWidget.Container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.AppWidgetPAPB2.AppWidgetContainer">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/section_id"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        style="@style/AppWidgetSection">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="WIDGET ID: "
+            android:layout_weight="2"
+            style="@style/AppWidgetLabel"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/widget_id"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            style="@style/AppWidgetText"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:id="@+id/section_update"
+        android:layout_below="@+id/section_id"
+        android:orientation="vertical"
+        style="@style/AppWidgetSection">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last updated"
+            android:textColor="@color/black"
+            style="@style/AppWidgetLabel"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:id="@+id/appwidget_update"
+            style="@style/AppWidgetText"/>
+    </LinearLayout>
+    
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="UPDATE"
+        android:id="@+id/update_btn"
+        android:layout_below="@+id/section_update"
+        style="@style/AppWidgetButton"/>
+
+</RelativeLayout>
